@@ -1,28 +1,35 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import CardList from './components/Cardlist';
 import SearchBox from './components/SearchBox';
 
 const App = () => {
-    const [ roboList, setRobolist ] = useState( [] );
+    const [ robots, setRobots ] = useState( [] );
     const [ searchField, setSearchField ] = useState( "" );
+
+    useEffect( () => {
+      fetch( 'https://jsonplaceholder.typicode.com/users' )
+        .then( response => response.json() )
+        .then( users => setRobots( users ))
+    }, []);
 
     const onSearchChange = ( event ) => {
         setSearchField( event.target.value );
-        console.log( searchField );
-        const newArrayFiltered = robots.filter( robot => {
-            return robot.name.toLowerCase().includes(searchField.toLowerCase());
-        })
-
-        setRobolist(newArrayFiltered);
     };
 
-    return (
+    const filteredRobots = robots.filter( robot => {
+            return robot.name.toLowerCase().includes( searchField.toLowerCase() );
+        })
+
+
+    return !robots.length ?
+      <h1>Loading...</h1> :
+      (
         <div className="tc">
-            <h1>RoboFriends</h1>
+            <h1>ROBOFRIENDS</h1>
             <SearchBox searchChange={onSearchChange}/>
-            <CardList robots={roboList} /> 
+            <CardList robots={ filteredRobots } /> 
         </div> 
-    );
-}
+      );
+  }
 
 export default App;
