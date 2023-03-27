@@ -1,7 +1,8 @@
 # Robotfriends
 React practice, friends profile with filtered search
 
-![robofriends](https://user-images.githubusercontent.com/114468848/224445898-ca6e9697-91d8-4fed-8f99-69603b757af7.jpg)
+![robotfriends](https://user-images.githubusercontent.com/114468848/228086168-4fcf651c-d491-4cf3-be11-c34c955ebbb0.jpg)
+
 
 ### Tutorial for React to run the project:
 
