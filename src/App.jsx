@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardList from './components/Cardlist';
 import SearchBox from './components/SearchBox';
+import ParticlesBg from "particles-bg";
 
 const App = () => {
     const [ robots, setRobots ] = useState( [] );
@@ -25,6 +26,7 @@ const App = () => {
       <h1>Loading...</h1> :
       (
         <div className="tc">
+            <ParticlesBg type="circle" bg={true}/>
             <h1>ROBOFRIENDS</h1>
             <SearchBox searchChange={onSearchChange}/>
             <CardList robots={ filteredRobots } /> 

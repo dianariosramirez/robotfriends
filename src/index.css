@@ -1,6 +1,6 @@
 body {
-  background-image: radial-gradient(circle at 50% -20.71%, #ffff52 0, #e8ff56 10%, #cbfa5c 20%, #acf162 30%, #8de668 40%, #6cd86c 50%, #49c970 60%, #1abd74 70%, #00b279 80%, #00a97e 90%, #00a184 100%);
-  color:#a1d1b3;  
+  background-color: black;
+  color:#e4eae6;  
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -8,7 +8,7 @@ body {
 h1 {
   font-size: 2em;
   font-weight: bold;
-  text-shadow: black 0.1em 0.1em 0.2em;
+  text-shadow: rgb(138, 199, 195) 0.1em 0.1em 0.2em;
   font-family: 'Righteous', cursive;
 }
 
